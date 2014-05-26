@@ -2,7 +2,6 @@ package com.raibledesigns.boot.config;
 
 import com.raibledesigns.boot.service.HelloService;
 import org.glassfish.jersey.filter.LoggingFilter;
-import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 
@@ -17,7 +16,6 @@ public class JerseyConfig extends ResourceConfig {
         property(ServerProperties.MOXY_JSON_FEATURE_DISABLE, true);
         property(ServerProperties.WADL_FEATURE_DISABLE, true);
         register(LoggingFilter.class);
-        register(JacksonFeature.class);
         register(HelloService.class);
     }
 }
